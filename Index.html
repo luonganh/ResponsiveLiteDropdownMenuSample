@@ -49,6 +49,29 @@
             }
             x.classList.toggle("change");
         }       
+
+        // Attach the event listener to the window's resize event
+        window.addEventListener('resize', handleResize);
+
+        // Call handleResize initially to check the screen width on page load
+        handleResize();
+
+        function handleResize() {
+            // Get the current screen width
+            var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+
+            // Specify the target width
+            var smallDevicesWidth = 480; // Change this to your specified number
+            var menuList = document.querySelector(".nav-list");
+            var menuIcon = document.querySelector(".menu-icon-container");
+            // Check if the screen width matches the specified number
+            if (screenWidth > smallDevicesWidth) {
+                menuList.style.display = "flex";
+            }
+            else if (!menuIcon.classList.contains('change')) {
+                menuList.style.display = "none";
+            }
+        }
     </script>
 </body>
 </html>
