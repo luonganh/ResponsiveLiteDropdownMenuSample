@@ -2,9 +2,39 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <title></title>
+    <title>Responsive Lite Dropdown Menu</title>
+    <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-
+    <div class="body-container">
+        <header>
+            <nav class="navbar container-fluid">
+                <a href="/" class="logo"><img class="logo-img" src="images/logo-desktop.png" /></a>
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="/">Home Page</a></li>
+                    <li class="nav-item"><a href="javascript:;">Category 1</a></li>
+                    <li class="nav-item dropdown">
+                        <a href="javascript:;"><span>Category 2</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="javascript:;">Category 2a</a></li>
+                            <li><a href="javascript:;">Category 2b</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="javascript:;">Category 3</a></li>
+                    <li class="nav-item"><a href="javascript:;">Category 4</a></li>
+                    <li class="nav-item"><a href="javascript:;">Category 5</a></li>
+                    <li class="nav-item"><a href="javascript:;">Category 6</a></li>
+                    <li class="nav-item"><a href="javascript:;">Category 7</a></li>
+                </ul>
+                <div class="menu-icon">
+                    <div class="menu-icon-container">
+                        <div class="bar1"></div>
+                        <div class="bar2"></div>
+                        <div class="bar3"></div>
+                    </div>
+                </div>
+            </nav>
+        </header>        
+    </div>
 </body>
 </html>
