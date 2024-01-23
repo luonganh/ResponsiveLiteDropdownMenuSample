@@ -5,6 +5,7 @@
     <title>Responsive Lite Dropdown Menu</title>
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/responsive_mobile.css" />
 </head>
 <body>
     <div class="body-container">
@@ -28,7 +29,7 @@
                     <li class="nav-item"><a href="javascript:;">Category 7</a></li>
                 </ul>
                 <div class="menu-icon">
-                    <div class="menu-icon-container">
+                    <div class="menu-icon-container" onclick="clickMobileMenu(this)">
                         <div class="bar1"></div>
                         <div class="bar2"></div>
                         <div class="bar3"></div>
@@ -37,5 +38,17 @@
             </nav>
         </header>        
     </div>
+    <script>        
+        function clickMobileMenu(x) {
+            var menuList = document.querySelector(".nav-list");
+            if (x.classList.contains('change')) {
+                menuList.style.display = "none";
+            }
+            else {
+                menuList.style.display = "flex";
+            }
+            x.classList.toggle("change");
+        }       
+    </script>
 </body>
 </html>
